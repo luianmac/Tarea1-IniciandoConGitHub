@@ -15,6 +15,7 @@ main()
 {
 int len;
 int max;
+
 char line[MAXLINE];
 char longest[MAXLINE];
 /*char str[SIZE];*/
@@ -85,6 +86,117 @@ printf("%d\n", nl);
 
 }
 
+
+/*funcines agregadas*/
+/* getline2: read a line into s, return length */
+
+int getline2(char s[],int lim)
+
+{
+
+    int c, i;
+
+    for (i=0; i < lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
+
+        s[i] = c;
+
+    if (c == '\n') {
+
+        s[i] = c;
+
+        ++i;
+
+    }
+
+    s[i] = '\0';
+
+    return i;
+
+}
+
+
+
+/* copy: copy 'from' into 'to'; assume to is big enough */
+
+void copy(char to[], char from[])
+
+{
+
+    int i;
+
+    i = 0;
+
+    while ((to[i] = from[i]) != '\0')
+
+        ++i;
+
+}
+
+
+
+/* cuenta: cuenta los caracteres de la cadena seleccionada */
+
+int cuenta(char cadena[])
+
+{
+
+    int i;
+
+    i = 0;
+
+    while (cadena[i] != '\0')
+
+        ++i;
+
+    return i;
+
+}
+
+
+
+/* cuenta_digitos: cuenta los digitos de la cadena seleccionada */
+
+int cuenta_digitos(char cadena[])
+
+{
+
+    int i, digitos;
+
+    i = 0;
+
+    digitos = 0;
+
+    while (cadena[i] != '\0')
+
+    {
+
+        if (cadena[i] >= '0' && cadena[i] <= '9')
+
+            ++digitos;
+
+        ++i;
+
+    }
+
+    return digitos;
+
+
+
+
+
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+}
 
 
 
